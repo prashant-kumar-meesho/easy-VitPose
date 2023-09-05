@@ -18,6 +18,4 @@ filterpy==1.4.5
 lap==0.4.0
 scikit-image==0.20.0
 
-onnxruntime-gpu>=1.13.0
-pycuda>=2022.2.2
 nvidia-tensorrt>=8.4
