@@ -210,7 +210,7 @@ class VitInference:
         results = None
         if (self.tracker is None or
            (self.frame_counter % self.yolo_step == 0 or self.frame_counter < 3)):
-            results = self.yolo(img, size=self.yolo_size)
+            results = self.yolo(img, size=self.yolo_size) #removed 
             res_pd = np.array([r[:5].tolist() for r in  # TODO: Confidence threshold
                                results.pandas().xyxy[0].to_numpy() if r[4] > 0.35]).reshape((-1, 5))
         self.frame_counter += 1
